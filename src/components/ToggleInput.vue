@@ -10,11 +10,12 @@
 export default {
   model: {
     prop: 'toggled',
+    event: 'toggle',
   },
   props: ['toggled'],
   methods: {
     toggle() {
-      this.$emit('input', !this.toggled);
+      this.$emit('toggle', !this.toggled);
     },
   },
 };
