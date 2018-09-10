@@ -8,6 +8,9 @@
 
 <script>
 export default {
+  model: {
+    prop: 'toggled',
+  },
   props: ['toggled'],
   methods: {
     toggle() {
