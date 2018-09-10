@@ -6,7 +6,9 @@
       <div class="card">
         <label class="block">
           <span class="form-label mb-2">Select a date</span>
-          <date-picker v-model="date"></date-picker>
+          <date-picker v-model="date"
+                       format="MMM D YYYY"
+          ></date-picker>
         </label>
       </div>
 
@@ -25,7 +27,7 @@ export default {
   },
   data() {
     return {
-      date: '2018-04-12',
+      date: 'Apr 12 2018',
     };
   },
 };

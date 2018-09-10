@@ -8,11 +8,14 @@ import Pikaday from 'pikaday';
 
 export default {
   name: 'DatePicker',
-  props: ['value'],
+  props: {
+    value: { required: true },
+    format: { default: 'YYYY-MM-DD' },
+  },
   mounted() {
     const picker = new Pikaday({
       field: this.$refs.input,
-      format: 'YYYY-MM-DD',
+      format: this.format,
       onSelect: () => {
         this.$emit('input', picker.toString());
       },
