@@ -1,6 +1,6 @@
 <template>
   <div class="modal-backdrop" v-show="show">
-    <div class="modal" @keydown.esc="dismiss" tabindex="0">
+    <div class="modal" @keydown.esc="dismiss" tabindex="0" ref="modal">
       <h1 class="text-center text-2xl font-bold mb-4">
         Exciting new features are here!
       </h1>
@@ -19,6 +19,13 @@
 <script>
 export default {
   props: ['show'],
+  watch: {
+    show(show) {
+      if (show) {
+          this.$refs.modal.focus();
+      }
+    },
+  },
   methods: {
     dismiss() {
       this.$emit('close');
@@ -28,5 +35,7 @@ export default {
 </script>
 
 <style scoped>
-
+.modal:focus {
+  outline: 0;
+}
 </style>
