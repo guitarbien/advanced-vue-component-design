@@ -6,7 +6,7 @@
       <div class="card">
         <label class="block">
           <span class="form-label mb-2">Select a date</span>
-          <input :value="date" class="form-input" type="text" id="datePicker" placeholder="YYYY-MM-DD">
+          <date-picker></date-picker>
         </label>
       </div>
 
@@ -15,26 +15,18 @@
 </template>
 
 <script>
-import Pikaday from 'pikaday';
 import UserSettingsForm from './components/UserSettingsForm.vue';
+import DatePicker from './components/DatePicker.vue';
 
 export default {
   components: {
     UserSettingsForm,
+    DatePicker,
   },
   data() {
     return {
       date: '2018-04-12',
     };
-  },
-  mounted() {
-    const picker = new Pikaday({
-      field: document.getElementById('datePicker'),
-      format: 'YYYY-MM-DD',
-      onSelect: () => {
-        this.date = picker.toString();
-      },
-    });
   },
 };
 </script>
