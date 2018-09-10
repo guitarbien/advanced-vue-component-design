@@ -8,6 +8,7 @@
           <span class="form-label mb-2">Select a date</span>
           <date-picker v-model="date"
                        format="MMM D YYYY"
+                       :options="{ firstDay: 1 }"
           ></date-picker>
         </label>
       </div>
