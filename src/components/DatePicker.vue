@@ -1,5 +1,6 @@
 <template>
-  <input :value="value" class="form-input" type="text" id="datePicker" placeholder="YYYY-MM-DD">
+  <input :value="value"
+         ref="input" class="form-input" type="text" id="datePicker" placeholder="YYYY-MM-DD">
 </template>
 
 <script>
@@ -10,7 +11,7 @@ export default {
   props: ['value'],
   mounted() {
     const picker = new Pikaday({
-      field: document.getElementById('datePicker'),
+      field: this.$refs.input,
       format: 'YYYY-MM-DD',
       onSelect: () => {
         this.$emit('input', picker.toString());
