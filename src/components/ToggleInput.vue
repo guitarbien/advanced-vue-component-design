@@ -1,6 +1,6 @@
 <template>
 <span class="toggle flex-no-shrink" role="checkbox" tabindex="0"
-      :aria-checked="value"
+      :aria-checked="toggled"
       @click="toggle"
       @keydown.space.prevent="toggle"
 ></span>
@@ -8,10 +8,10 @@
 
 <script>
 export default {
-  props: ['value'],
+  props: ['toggled'],
   methods: {
     toggle() {
-      this.$emit('input', !this.value);
+      this.$emit('input', !this.toggled);
     },
   },
 };
