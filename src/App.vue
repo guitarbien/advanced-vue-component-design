@@ -31,6 +31,9 @@ export default {
     const picker = new Pikaday({
       field: document.getElementById('datePicker'),
       format: 'YYYY-MM-DD',
+      onSelect: () => {
+        this.date = picker.toString();
+      },
     });
   },
 };
