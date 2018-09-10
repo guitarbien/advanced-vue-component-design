@@ -1,6 +1,6 @@
 <template>
   <div class="modal-backdrop" v-show="show">
-    <div class="modal" @keydown.esc="dismiss">
+    <div class="modal" @keydown.esc="dismiss" tabindex="0">
       <h1 class="text-center text-2xl font-bold mb-4">
         Exciting new features are here!
       </h1>
