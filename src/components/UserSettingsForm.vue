@@ -3,15 +3,13 @@
     <h1 class="text-2xl font-bold mb-6">Your Settings</h1>
     <label class="block mb-6">
       <span class="form-label mb-2">Email Address</span>
-      <input :value="email"
-             @input="email = $event.target.value"
-             class="form-input" placeholder="you@example.com">
+      <input v-model="email" class="form-input" placeholder="you@example.com">
     </label>
     <div class="mb-8">
       <span class="form-label mb-2">Newsletter</span>
       <div class="flex justify-between items-center">
         <p class="mr-4">Send you occasional news and updates.</p>
-        <toggle-input :value="receiveNewsletter"></toggle-input>
+        <toggle-input v-model="receiveNewsletter"></toggle-input>
       </div>
     </div>
     <div class="text-right">
@@ -38,9 +36,6 @@ export default {
         email: this.email,
         receiveNewsletter: this.receiveNewsletter,
       });
-    },
-    toggleNewsletter() {
-      this.receiveNewsletter = !this.receiveNewsletter;
     },
   },
 };
