@@ -6,7 +6,7 @@
       <div class="card">
         <label class="block">
           <span class="form-label mb-2">Select a date</span>
-          <date-picker></date-picker>
+          <date-picker v-model="date"></date-picker>
         </label>
       </div>
 
