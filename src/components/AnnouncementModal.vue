@@ -22,7 +22,9 @@ export default {
   watch: {
     show(show) {
       if (show) {
+        this.$nextTick(() => {
           this.$refs.modal.focus();
+        });
       }
     },
   },
