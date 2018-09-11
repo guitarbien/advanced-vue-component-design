@@ -23,14 +23,17 @@ export default {
     preventBackgroundScrolling: { default: true },
   },
   watch: {
-    show(show) {
-      if (this.preventBackgroundScrolling) {
-        if (show) {
-          document.body.style.setProperty('overflow', 'hidden');
-        } else {
-          document.body.style.removeProperty('overflow');
+    show: {
+      immediate: true,
+      handler() {
+        if (this.preventBackgroundScrolling) {
+          if (this.show) {
+            document.body.style.setProperty('overflow', 'hidden');
+          } else {
+            document.body.style.removeProperty('overflow');
+          }
         }
-      }
+      },
     },
   },
   created() {

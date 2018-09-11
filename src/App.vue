@@ -30,7 +30,6 @@
 
       <announcement-modal :show="modalOpen"
                           @close="modalOpen = false"
-                          :prevent-background-scrolling="false"
       ></announcement-modal>
     </div>
   </div>
@@ -50,6 +49,7 @@ export default {
   data() {
     return {
       date: 'Apr 12 2018',
+      // set to true the modal will open by default, and the scrollbar should be disabled
       modalOpen: false,
     };
   },
