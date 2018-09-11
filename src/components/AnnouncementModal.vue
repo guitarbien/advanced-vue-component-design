@@ -19,6 +19,15 @@
 <script>
 export default {
   props: ['show'],
+  watch: {
+    show(show) {
+      if (show) {
+        document.body.style.setProperty('overflow', 'hidden');
+      } else {
+        document.body.style.removeProperty('overflow');
+      }
+    },
+  },
   created() {
     const escapeHandler = (e) => {
       if (e.key === 'Escape' && this.show) {
