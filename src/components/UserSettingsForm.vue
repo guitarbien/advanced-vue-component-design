@@ -32,19 +32,18 @@
 <script>
 
 import ToggleInput from './ToggleInput.vue';
-import ConfirmDeleteModal from './ConfirmDeleteModal.vue';
+import DeleteAccountButton from './DeleteAccountButton.vue';
 
 export default {
   components: {
     ToggleInput,
-    ConfirmDeleteModal,
+    DeleteAccountButton,
   },
   props: ['accountId'],
   data() {
     return {
       email: 'jane@example.com',
       receiveNewsletter: false,
-      confirmDeleteModalOpen: false,
     };
   },
   methods: {
