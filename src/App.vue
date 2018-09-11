@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-grey-darker p-8">
+  <div class="min-h-screen bg-grey-darker p-8 modal-open">
     <div class="max-w-sm mx-auto">
       <!-- 01 -->
       <user-settings-form></user-settings-form>
@@ -55,3 +55,9 @@ export default {
 
 <style src="./assets/css/pikaday.css"></style>
 <style src="./assets/css/app.css"></style>
+<style>
+.modal-open {
+  max-height: 100vh;
+  overflow: hidden;
+}
+</style>
