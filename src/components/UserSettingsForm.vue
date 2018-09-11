@@ -14,8 +14,13 @@
     </div>
     <div class="flex justify-between">
       <button type="button" class="text-red-dark hover:underline"
-              @click="$emit('open:confirm-delete-modal')"
+              @click="confirmDeleteModalOpen = true"
       >Delete Account</button>
+
+      <confirm-delete-modal :show="confirmDeleteModalOpen"
+                            @close="confirmDeleteModalOpen = false"
+                            :account-id="accountId"
+      ></confirm-delete-modal>
 
       <button type="submit" class="btn btn-blue">Update Settings</button>
     </div>
@@ -25,13 +30,19 @@
 <script>
 
 import ToggleInput from './ToggleInput.vue';
+import ConfirmDeleteModal from './ConfirmDeleteModal.vue';
 
 export default {
-  components: { ToggleInput },
+  components: {
+    ToggleInput,
+    ConfirmDeleteModal,
+  },
+  props: ['accountId'],
   data() {
     return {
       email: 'jane@example.com',
       receiveNewsletter: false,
+      confirmDeleteModalOpen: false,
     };
   },
   methods: {
