@@ -12,15 +12,17 @@
         <toggle-input v-model="receiveNewsletter"></toggle-input>
       </div>
     </div>
-    <div class="flex justify-between">
+    <div class="flex justify-between" style="opacity: .5">
       <button type="button" class="text-red-dark hover:underline"
               @click="confirmDeleteModalOpen = true"
       >Delete Account</button>
 
-      <confirm-delete-modal :show="confirmDeleteModalOpen"
-                            @close="confirmDeleteModalOpen = false"
-                            :account-id="accountId"
-      ></confirm-delete-modal>
+      <portal to="modals">
+        <confirm-delete-modal :show="confirmDeleteModalOpen"
+                              @close="confirmDeleteModalOpen = false"
+                              :account-id="accountId"
+        ></confirm-delete-modal>
+      </portal>
 
       <button type="submit" class="btn btn-blue">Update Settings</button>
     </div>
