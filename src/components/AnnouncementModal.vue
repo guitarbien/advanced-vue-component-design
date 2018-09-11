@@ -18,13 +18,18 @@
 
 <script>
 export default {
-  props: ['show'],
+  props: {
+    show: { required: true },
+    preventBackgroundScrolling: { default: true },
+  },
   watch: {
     show(show) {
-      if (show) {
-        document.body.style.setProperty('overflow', 'hidden');
-      } else {
-        document.body.style.removeProperty('overflow');
+      if (this.preventBackgroundScrolling) {
+        if (show) {
+          document.body.style.setProperty('overflow', 'hidden');
+        } else {
+          document.body.style.removeProperty('overflow');
+        }
       }
     },
   },

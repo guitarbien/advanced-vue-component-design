@@ -28,7 +28,10 @@
         <p class="mb-6">All these things, and a thousand like them, came to pass in and close upon the dear old year one thousand seven hundred and seventy-five. Environed by them, while the Woodman and the Farmer worked unheeded, those two of the large jaws, and those other two of the plain and the fair faces, trod with stir enough, and carried their divine rights with a high hand. Thus did the year one thousand seven hundred and seventy-five conduct their Greatnesses, and myriads of small creatures--the creatures of this chronicle among the rest--along the roads that lay before them.</p>
       </div>
 
-      <announcement-modal :show="modalOpen" @close="modalOpen = false"></announcement-modal>
+      <announcement-modal :show="modalOpen"
+                          @close="modalOpen = false"
+                          :prevent-background-scrolling="false"
+      ></announcement-modal>
     </div>
   </div>
 </template>
