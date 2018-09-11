@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-grey-darker p-8 modal-open">
+  <div class="min-h-screen bg-grey-darker p-8" :class="{'modal-open': modalOpen}">
     <div class="max-w-sm mx-auto">
       <!-- 01 -->
       <user-settings-form></user-settings-form>
