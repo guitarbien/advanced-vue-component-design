@@ -2,7 +2,8 @@
   <div class="min-h-screen bg-grey-darker p-8">
     <div class="max-w-sm mx-auto">
       <!-- 01 -->
-      <user-settings-form></user-settings-form>
+      <user-settings-form @open:confirm-delete-modal="confirmDeleteModalOpen = true"
+      ></user-settings-form>
 
       <!-- 02 -->
       <div class="card">
@@ -14,6 +15,12 @@
           ></date-picker>
         </label>
       </div>
+
+      <!-- 06 -->
+      <confirm-delete-modal :show="confirmDeleteModalOpen"
+                            @close="confirmDeleteModalOpen = false"
+                            :account-id="accountId"
+      ></confirm-delete-modal>
 
       <!-- 03 -->
       <div class="card justify-center">
@@ -39,18 +46,22 @@
 import UserSettingsForm from './components/UserSettingsForm.vue';
 import DatePicker from './components/DatePicker.vue';
 import AnnouncementModal from './components/AnnouncementModal.vue';
+import ConfirmDeleteModal from './components/ConfirmDeleteModal.vue';
 
 export default {
   components: {
     UserSettingsForm,
     DatePicker,
     AnnouncementModal,
+    ConfirmDeleteModal,
   },
   data() {
     return {
       date: 'Apr 12 2018',
       // set to true the modal will open by default, and the scrollbar should be disabled
       modalOpen: false,
+      accountId: 7,
+      confirmDeleteModalOpen: false,
     };
   },
 };

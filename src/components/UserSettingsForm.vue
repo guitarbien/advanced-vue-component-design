@@ -12,7 +12,11 @@
         <toggle-input v-model="receiveNewsletter"></toggle-input>
       </div>
     </div>
-    <div class="text-right">
+    <div class="flex justify-between">
+      <button type="button" class="text-red-dark hover:underline"
+              @click="$emit('open:confirm-delete-modal')"
+      >Delete Account</button>
+
       <button type="submit" class="btn btn-blue">Update Settings</button>
     </div>
   </form>
