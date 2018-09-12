@@ -16,7 +16,7 @@
 import ConfirmDeleteModal from './ConfirmDeleteModal.vue';
 
 export default {
-  name: "DeleteAccountButton",
+  name: 'DeleteAccountButton',
   components: {
     ConfirmDeleteModal,
   },
@@ -24,9 +24,9 @@ export default {
   data() {
     return {
       confirmDeleteModalOpen: false,
-    }
-  }
-}
+    };
+  },
+};
 </script>
 
 <style scoped>
