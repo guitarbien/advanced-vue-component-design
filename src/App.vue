@@ -17,6 +17,9 @@
 
       <!-- 06 -->
       <portal-target name="modals"></portal-target>
+      <!-- 07 -->
+      <!--<portal-target name="tooltips"></portal-target>-->
+      <!--<portal-target name="dropdowns"></portal-target>-->
 
       <!-- 03 -->
       <div class="card justify-center">
