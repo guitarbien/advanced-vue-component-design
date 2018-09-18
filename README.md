@@ -19,3 +19,13 @@ yarn run build
 ```
 yarn run lint
 ```
+
+---
+
+章節重點：
+
+- [01-Building Controlled Components.md](./docs/01-BuildingControlledComponents.md)
+- [03-Wrapping External Libraries As Vue Components.md](./docs/03-WrappingExternalLibrariesAsVueComponents.md)
+- [04-Encapsulating External Behavior Closing On Escape.md](./docs/04-EncapsulatingExternalBehaviorClosingOnEscape.md)
+- [05-Encapsulating External Behavior Background Scrolling.md](./docs/05-EncapsulatingExternalBehaviorBackgroundScrolling.md)
+- [06-Encapsulating External Behavior With Portals.md](./docs/06-EncapsulatingExternalBehaviorWithPortals.md)
