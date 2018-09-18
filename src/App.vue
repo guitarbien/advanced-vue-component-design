@@ -45,9 +45,9 @@
 
       <div class="max-w-xs mx-auto mb-8">
         <media-card>
-          <div slot="heading">
+          <template slot="heading">
             The Long Road to Mastering the Perfect Cartwheel
-          </div>
+          </template>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos accusantium minima architecto natus sequi quisquam incidunt dolorem, adipisci accusamus facere dicta magni, qui consectetur, omnis quis, voluptas tempore quo!</p>
         </media-card>
       </div>
