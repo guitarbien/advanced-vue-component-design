@@ -36,6 +36,7 @@
 
       <portal to="modals" v-if="modalOpen">
         <announcement-modal :show="modalOpen"
+                            :preventBackgroundScrolling="false"
                             @close="modalOpen = false"
         ></announcement-modal>
       </portal>
