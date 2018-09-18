@@ -1,0 +1,4 @@
+- [`<slot></slot>`](https://vuejs.org/v2/guide/components-slots.html)
+- Named Slot
+- Named Slot 需要一個 html element 來存放其內容，如果不想要增加原本沒有的 element (例如 <div>)，則可以改用 <template>
+- slot could have the default content
