@@ -1,7 +1,7 @@
 <template>
   <div class="media-card">
     <div class="media-card-image">
-      <img src="https://images.unsplash.com/photo-1495835788122-ca48931258be?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=acc48b0187b28f7a221362b843f15755&auto=format&fit=crop&w=3450&q=80" alt="">
+      <slot name="image"></slot>
     </div>
     <div class="media-card-content">
       <h4 class="media-card-heading">

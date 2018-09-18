@@ -45,6 +45,7 @@
 
       <div class="max-w-xs mx-auto mb-8">
         <media-card>
+          <img slot="image" src="https://images.unsplash.com/photo-1495835788122-ca48931258be?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=acc48b0187b28f7a221362b843f15755&auto=format&fit=crop&w=3450&q=80" alt="">
           <template slot="heading">
             The Long Road to Mastering the Perfect Cartwheel
           </template>
