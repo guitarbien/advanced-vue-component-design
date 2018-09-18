@@ -5,7 +5,9 @@
     </div>
     <div class="media-card-content">
       <h4 class="media-card-heading">
-        <slot name="heading"></slot>
+        <slot name="heading">
+          Default card heading goes here
+        </slot>
       </h4>
       <div class="media-card-body">
         <slot></slot>
