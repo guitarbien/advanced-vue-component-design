@@ -34,6 +34,13 @@
                             @close="modalOpen = false"
         ></announcement-modal>
       </portal>
+
+      <!-- 08 -->
+      <div class="text-center p-8 my-8">
+        <button type="button" class="btn btn-blue">Click me</button>
+        <primary-button text="Download"></primary-button>
+      </div>
+
     </div>
   </div>
 </template>
@@ -42,12 +49,14 @@
 import UserSettingsForm from './components/UserSettingsForm.vue';
 import DatePicker from './components/DatePicker.vue';
 import AnnouncementModal from './components/AnnouncementModal.vue';
+import PrimaryButton from './components/PrimaryButton.vue';
 
 export default {
   components: {
     UserSettingsForm,
     DatePicker,
     AnnouncementModal,
+    PrimaryButton,
   },
   data() {
     return {
