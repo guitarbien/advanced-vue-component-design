@@ -44,7 +44,9 @@
       </div>
 
       <div class="max-w-xs mx-auto mb-8">
-        <media-card></media-card>
+        <media-card>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos accusantium minima architecto natus sequi quisquam incidunt dolorem, adipisci accusamus facere dicta magni, qui consectetur, omnis quis, voluptas tempore quo!</p>
+        </media-card>
       </div>
 
 

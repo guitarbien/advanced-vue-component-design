@@ -8,7 +8,7 @@
         The Long Road to Mastering the Perfect Cartwheel
       </h4>
       <div class="media-card-body">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia eos accusantium minima architecto natus sequi quisquam incidunt dolorem, adipisci accusamus facere dicta magni, qui consectetur, omnis quis, voluptas tempore quo!</p>
+        <slot></slot>
       </div>
     </div>
   </div>
