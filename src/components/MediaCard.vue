@@ -5,7 +5,7 @@
     </div>
     <div class="media-card-content">
       <h4 class="media-card-heading">
-        The Long Road to Mastering the Perfect Cartwheel
+        <slot name="heading"></slot>
       </h4>
       <div class="media-card-body">
         <slot></slot>
