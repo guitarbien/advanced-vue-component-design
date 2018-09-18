@@ -43,6 +43,11 @@
         </primary-button>
       </div>
 
+      <div class="max-w-xs mx-auto mb-8">
+        <media-card></media-card>
+      </div>
+
+
     </div>
   </div>
 </template>
@@ -52,6 +57,7 @@ import UserSettingsForm from './components/UserSettingsForm.vue';
 import DatePicker from './components/DatePicker.vue';
 import AnnouncementModal from './components/AnnouncementModal.vue';
 import PrimaryButton from './components/PrimaryButton.vue';
+import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
@@ -59,6 +65,7 @@ export default {
     DatePicker,
     AnnouncementModal,
     PrimaryButton,
+    MediaCard,
   },
   data() {
     return {
