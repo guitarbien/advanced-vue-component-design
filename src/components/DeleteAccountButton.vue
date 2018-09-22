@@ -1,5 +1,5 @@
 <template>
-  <button type="button" class="text-red-dark hover:underline"
+  <button type="button"
           @click="confirmDeleteModalOpen = true"
   >
     <slot></slot>
