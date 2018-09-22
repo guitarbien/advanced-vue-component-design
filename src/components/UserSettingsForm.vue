@@ -13,8 +13,9 @@
       </div>
     </div>
     <div class="flex justify-between" style="opacity: .5">
-      <delete-account-button :account-id="accountId"></delete-account-button>
-
+      <delete-account-button :account-id="accountId">
+        Delete Account
+      </delete-account-button>
       <button type="submit" class="btn btn-blue">Update Settings</button>
     </div>
   </form>
