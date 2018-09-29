@@ -1,9 +1,11 @@
 <template>
-  <div class="modal-backdrop" v-show="show">
-    <div class="modal">
-      <slot></slot>
+  <portal to="modals" v-if="show">
+    <div class="modal-backdrop" v-show="show">
+      <div class="modal">
+        <slot></slot>
+      </div>
     </div>
-  </div>
+  </portal>
 </template>
 
 <script>

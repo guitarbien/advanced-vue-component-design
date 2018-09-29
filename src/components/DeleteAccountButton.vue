@@ -3,12 +3,10 @@
           @click="confirmDeleteModalOpen = true"
   >
     <slot></slot>
-    <portal to="modals" v-if="confirmDeleteModalOpen">
-      <confirm-delete-modal :show="confirmDeleteModalOpen"
-                            @close="confirmDeleteModalOpen = false"
-                            :account-id="accountId"
-      ></confirm-delete-modal>
-    </portal>
+    <confirm-delete-modal :show="confirmDeleteModalOpen"
+                          @close="confirmDeleteModalOpen = false"
+                          :account-id="accountId"
+    ></confirm-delete-modal>
   </button>
 </template>
 
