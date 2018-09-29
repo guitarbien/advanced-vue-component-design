@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: "ModalDialog",
+  name: 'ModalDialog',
   props: ['show'],
   watch: {
     show: {
@@ -38,7 +38,7 @@ export default {
       document.removeEventListener('keydown', escapeHandler);
     });
   },
-}
+};
 </script>
 
 <style scoped>
