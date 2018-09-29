@@ -1,6 +1,7 @@
 <template>
   <div class="modal-backdrop" v-show="show">
     <div class="modal">
+      <slot></slot>
     </div>
   </div>
 </template>
