@@ -1,6 +1,6 @@
 <template>
   <portal to="modals" v-if="show">
-    <div class="modal-backdrop" v-show="show">
+    <div class="modal-backdrop">
       <div class="modal">
         <slot></slot>
       </div>
