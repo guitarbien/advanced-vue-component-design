@@ -68,11 +68,14 @@
         </media-card>
       </div>
 
+      <!-- 11 -->
+      <!--<contact-list></contact-list>-->
     </div>
   </div>
 </template>
 
 <script>
+import ContactList from './components/ContactList.vue';
 import UserSettingsForm from './components/UserSettingsForm.vue';
 import DatePicker from './components/DatePicker.vue';
 import AnnouncementModal from './components/AnnouncementModal.vue';
@@ -81,6 +84,7 @@ import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
+    ContactList,
     UserSettingsForm,
     DatePicker,
     AnnouncementModal,
