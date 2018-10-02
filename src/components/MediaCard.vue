@@ -18,8 +18,8 @@
 
 <script>
 export default {
-  name: "MediaCard"
-}
+  name: 'MediaCard',
+};
 </script>
 
 <style scoped>

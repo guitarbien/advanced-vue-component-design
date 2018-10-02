@@ -6,9 +6,9 @@
 
 <script>
 export default {
-  name: "PrimaryButton",
+  name: 'PrimaryButton',
   props: ['text'],
-}
+};
 </script>
 
 <style scoped>

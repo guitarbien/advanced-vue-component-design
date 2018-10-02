@@ -21,19 +21,14 @@
 </template>
 
 <script>
+import contacts from '../../static/contact.json';
+
 export default {
   name: 'ContactList',
   data() {
     return {
-      contacts: [],
+      contacts,
     };
-  },
-  created() {
-    fetch('/contacts.json')
-      .then(response => response.json())
-      .then((contacts) => {
-        this.contacts = contacts;
-      });
   },
 };
 </script>
