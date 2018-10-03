@@ -9,7 +9,7 @@
             {{ pseudoSlot({ contact: contact }) }}
           </div>
           <div class="font-bold">
-            <slot :content="contact"></slot>
+            <slot :contact="contact"></slot>
           </div>
           <div class="text-grey-dark">
             {{ contact.email }}
