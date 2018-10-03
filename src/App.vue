@@ -71,7 +71,9 @@
       <!-- 11 -->
       <contact-list :pseudo-slot="(props) => props.contact.name.first">
         <template slot-scope="props">
-          {{ props.contact.name.first }}
+          <a :href="`/contacts/${props.contact.id}`">
+            {{ props.contact.name.first }}
+          </a>
         </template>
       </contact-list>
     </div>
