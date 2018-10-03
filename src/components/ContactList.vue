@@ -6,7 +6,7 @@
         <img :src="contact.picture.medium" class="h-12 w-12 rounded-full block mr-2" alt="">
         <div>
           <div class="font-bold">
-            {{ contact.name.first }} {{ contact.name.last }}
+            <slot></slot>
           </div>
           <div class="font-bold">
             <slot :contact="contact"></slot>

@@ -69,7 +69,7 @@
       </div>
 
       <!-- 11 -->
-      <contact-list></contact-list>
+      <contact-list>{{ contact.name.first }}</contact-list>
     </div>
   </div>
 </template>
