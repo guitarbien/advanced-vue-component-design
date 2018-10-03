@@ -6,7 +6,7 @@
         <img :src="contact.picture.medium" class="h-12 w-12 rounded-full block mr-2" alt="">
         <div>
           <div class="font-bold">
-            <slot></slot>
+            {{ pseudoSlot }}
           </div>
           <div class="font-bold">
             <slot :contact="contact"></slot>
@@ -23,6 +23,7 @@
 <script>
 export default {
   name: 'ContactList',
+  props: ['pseudoSlot'],
   data() {
     return {
       contacts: [],

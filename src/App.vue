@@ -69,7 +69,7 @@
       </div>
 
       <!-- 11 -->
-      <contact-list>{{ contact.name.first }}</contact-list>
+      <contact-list :pseudo-slot="'hello' + ' world'"></contact-list>
     </div>
   </div>
 </template>
