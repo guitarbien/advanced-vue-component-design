@@ -8,6 +8,9 @@
           <div class="font-bold">
             {{ pseudoSlot(contact) }}
           </div>
+          <div class="font-bold">
+            <slot :content="contact"></slot>
+          </div>
           <div class="text-grey-dark">
             {{ contact.email }}
           </div>
