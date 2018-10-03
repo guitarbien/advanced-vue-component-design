@@ -69,7 +69,7 @@
       </div>
 
       <!-- 11 -->
-      <contact-list :pseudo-slot="'hello' + ' world'"></contact-list>
+      <contact-list :pseudo-slot="() => 'hello' + ' world'"></contact-list>
     </div>
   </div>
 </template>
