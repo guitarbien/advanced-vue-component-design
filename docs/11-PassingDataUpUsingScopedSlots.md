@@ -1,6 +1,6 @@
 若是資料本身存在於 component 內，但想讓外部自由做有限的調整，則可將 property 以 function 傳入
 
-prop 單純傳入資料
+props 單純傳入資料
 
 ```vue
 <!--app.vue-->
@@ -20,7 +20,7 @@ prop 單純傳入資料
 {{ pseudoSlot() }}
 ```
 
-在 component 內將資料傳入 prop 的 function，讓外部決定資料格式
+在 component 內將資料傳入 props 的 function，讓外部決定資料格式
 
 ```vue
 <!--app.vue-->
