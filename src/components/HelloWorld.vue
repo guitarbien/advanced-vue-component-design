@@ -1,12 +1,13 @@
 <script>
 export default {
   name: 'HelloWorld',
+  props: ['tag'],
   render(createElement) {
     // return createElement(element, attribute, child);
-    return createElement('span', {
+    return createElement(this.tag, {
       attrs: {
-        class: 'text-xl text-blue font-bold'
-      }
+        class: 'btn btn-blue',
+      },
     }, 'Hello World!');
   },
 };
