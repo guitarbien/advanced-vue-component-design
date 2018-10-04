@@ -9,7 +9,11 @@ export default {
   props: ['tag'],
   render(createElement) {
     // return createElement(element, attribute, child);
-    return createElement(PrimaryButton, {}, 'Hello World 02!');
+    return createElement(PrimaryButton, {
+      on: {
+        click: () => console.log('Clicked!'),
+      },
+    }, 'Hello World 02!');
   },
 };
 </script>
