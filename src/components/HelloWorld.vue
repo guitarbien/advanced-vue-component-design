@@ -15,6 +15,11 @@ export default {
       props: {
         toggled: this.enabled,
       },
+      on: {
+        toggle: (newValue) => {
+          this.enabled = newValue;
+        },
+      },
     });
   },
 };
