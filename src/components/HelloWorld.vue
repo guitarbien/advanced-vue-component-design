@@ -1,16 +1,16 @@
 <script>
-import PrimaryButton from './PrimaryButton.vue';
+import ToggleInput from './ToggleInput.vue';
 
 export default {
   name: 'HelloWorld',
   props: [],
   render(createElement) {
     // return createElement(element, attribute, child);
-    return createElement(PrimaryButton, {
-      nativeOn: {
-        click: () => console.log('Clicked!'),
+    return createElement(ToggleInput, {
+      props: {
+        toggled: true,
       },
-    }, 'Hello World 02!');
+    });
   },
 };
 </script>
