@@ -10,7 +10,7 @@ export default {
   render(createElement) {
     // return createElement(element, attribute, child);
     return createElement(PrimaryButton, {
-      on: {
+      nativeOn: {
         click: () => console.log('Clicked!'),
       },
     }, 'Hello World 02!');
