@@ -8,6 +8,9 @@ export default {
       attrs: {
         class: 'btn btn-blue',
       },
+      on: {
+        click: () => console.log('Clicked!'),
+      },
     }, 'Hello World!');
   },
 };
