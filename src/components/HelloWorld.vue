@@ -3,9 +3,6 @@ import PrimaryButton from './PrimaryButton.vue';
 
 export default {
   name: 'HelloWorld',
-  components: {
-    PrimaryButton,
-  },
   props: [],
   render(createElement) {
     // return createElement(element, attribute, child);
