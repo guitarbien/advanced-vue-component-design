@@ -74,11 +74,18 @@
           {{ contact.name.first }}
         </a>
       </contact-list>
+
+      <!-- 12 -->
+      <div class="text-center p-8 my-8 card">
+        <hello-world></hello-world>
+      </div>
+
     </div>
   </div>
 </template>
 
 <script>
+import HelloWorld from './components/HelloWorld.vue';
 import ContactList from './components/ContactList.vue';
 import UserSettingsForm from './components/UserSettingsForm.vue';
 import DatePicker from './components/DatePicker.vue';
@@ -88,6 +95,7 @@ import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
+    HelloWorld,
     ContactList,
     UserSettingsForm,
     DatePicker,
