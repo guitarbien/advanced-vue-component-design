@@ -6,7 +6,7 @@ export default {
   components: {
     PrimaryButton,
   },
-  props: ['tag'],
+  props: [],
   render(createElement) {
     // return createElement(element, attribute, child);
     return createElement(PrimaryButton, {

@@ -77,7 +77,7 @@
 
       <!-- 12 -->
       <div class="text-center p-8 my-8 card">
-        <hello-world tag="button"></hello-world>
+        <hello-world></hello-world>
       </div>
 
     </div>
