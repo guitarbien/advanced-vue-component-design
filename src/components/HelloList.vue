@@ -10,7 +10,10 @@ export default {
     };
   },
   render(createElement) {
-    return createElement('ul', {}, this.contacts.map(contact => createElement('li', {}, `${contact.name.first} ${contact.name.last}`)));
+    return createElement('div', {}, [
+      createElement('h1', {}, 'Your Contacts'),
+      createElement('ul', {}, this.contacts.map(contact => createElement('li', {}, `${contact.name.first} ${contact.name.last}`))),
+    ]);
   },
 };
 </script>
