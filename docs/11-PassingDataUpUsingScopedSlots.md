@@ -83,3 +83,7 @@ closure 內也可以傳入物件
 <!--component-->
 <slot :contact="contact"></slot>
 ```
+
+---
+
+__slot__ 就是 value， __scoped slot__ 就是 function
