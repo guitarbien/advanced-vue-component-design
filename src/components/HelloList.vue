@@ -1,11 +1,3 @@
-<template>
-  <ul>
-    <li v-for="(contact, key) in contacts" :key="key">
-      {{ contact.name.first}} {{ contact.name.last}}
-    </li>
-  </ul>
-</template>
-
 <script>
 import contacts from '../../public/contact.json';
 
@@ -15,6 +7,9 @@ export default {
     return {
       contacts,
     };
+  },
+  render(createElement) {
+    return createElement('ul', {}, this.contacts.map(contact => createElement('li', {}, `${contact.name.first} ${contact.name.last}`)));
   },
 };
 </script>
