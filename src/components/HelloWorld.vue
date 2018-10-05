@@ -30,7 +30,9 @@ export default {
         attrs: {
           class: 'text-xl text-blue font-bold',
         },
-      }, 'Hello World!'),
+      }, [
+        this.$slots.default,
+      ]),
     ]);
   },
 };
