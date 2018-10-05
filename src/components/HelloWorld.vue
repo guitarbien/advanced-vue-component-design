@@ -26,6 +26,11 @@ export default {
       }),
       createElement('h1', {}, 'Your Contacts'),
       createElement('ul', {}, this.contacts.map(contact => createElement('li', {}, `${contact.name.first} ${contact.name.last}`))),
+      createElement('span', {
+        attrs: {
+          class: 'text-xl text-blue font-bold',
+        },
+      }, 'Hello World!'),
     ]);
   },
 };
