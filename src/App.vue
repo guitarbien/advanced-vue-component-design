@@ -80,11 +80,16 @@
         <hello-world></hello-world>
       </div>
 
+      <!-- 14 -->
+      <div class="text-center p-8 my-8 card">
+        <hello-list></hello-list>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import HelloList from './components/HelloList.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import ContactList from './components/ContactList.vue';
 import UserSettingsForm from './components/UserSettingsForm.vue';
@@ -95,6 +100,7 @@ import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
+    HelloList,
     HelloWorld,
     ContactList,
     UserSettingsForm,
