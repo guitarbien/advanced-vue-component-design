@@ -13,11 +13,6 @@ export default {
     };
   },
   render(createElement) {
-    console.log(
-      this.$scopedSlots.default({
-        subject: 'world',
-      }));
-
     return createElement('div', {}, [
       createElement(ToggleInput, {
         props: {
@@ -31,15 +26,9 @@ export default {
       }),
       createElement('h1', {}, 'Your Contacts'),
       createElement('ul', {}, this.contacts.map(contact => createElement('li', {}, `${contact.name.first} ${contact.name.last}`))),
-      createElement('span', {
-        attrs: {
-          class: 'text-xl text-blue font-bold',
-        },
-      }, [
-        this.$scopedSlots.default({
-          subject: 'world',
-        }),
-      ]),
+      this.$scopedSlots.default({
+        subject: 'world',
+      }),
     ]);
   },
 };
