@@ -1,0 +1,7 @@
+- 可以使用 runder() 替代 <template>
+- 一旦有 <template> 則不會執行 render()
+- 當要 render component 的時候 element 直接傳 component 變數即可，export default object 內也不需要設定 `componentes`
+- 外部傳入 props 讓 component 的 render 使用
+- 可以使用 `on: {}` [createElement() 3rd parameter data object](https://vuejs.org/v2/guide/render-function.html#The-Data-Object-In-Depth) 來宣告 event listener
+  - vue 在 render component 時預設只對 custom event 監聽，當要 listen 原生 event 時則要用 `nativeOn: {}`
+- 若要 render 多個 element，可在 `createElement('div', {}, [])` 第三個參數傳入陣列，並放入多個 `createElement()`

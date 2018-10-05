@@ -31,3 +31,4 @@ yarn run lint
 - [06-Encapsulating External Behavior With Portals.md](./docs/06-EncapsulatingExternalBehaviorWithPortals.md)
 - [08-Injecting Content Using Slots.md](docs/08-InjectingContentUsingSlots.md)
 - [11-Passing Data Up Using Scoped Slots.md](./docs/11-PassingDataUpUsingScopedSlots.md)
+- [12-Render Functions 101.md](./docs/12-RenderFunctions101.md)
