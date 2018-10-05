@@ -1,4 +1,5 @@
 <script>
+/** @type {Array} */
 import contacts from '../../public/contact.json';
 
 export default {
