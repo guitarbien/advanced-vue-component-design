@@ -1,4 +1,6 @@
 <script>
+/** @type {Array} */
+import contacts from '../../public/contact.json';
 import ToggleInput from './ToggleInput.vue';
 
 export default {
@@ -6,21 +8,25 @@ export default {
   props: [],
   data() {
     return {
+      contacts,
       enabled: true,
     };
   },
   render(createElement) {
-    // return createElement(element, attribute, child);
-    return createElement(ToggleInput, {
-      props: {
-        toggled: this.enabled,
-      },
-      on: {
-        toggle: (newValue) => {
-          this.enabled = newValue;
+    return createElement('div', {}, [
+      createElement(ToggleInput, {
+        props: {
+          toggled: this.enabled,
         },
-      },
-    });
+        on: {
+          toggle: (newValue) => {
+            this.enabled = newValue;
+          },
+        },
+      }),
+      createElement('h1', {}, 'Your Contacts'),
+      createElement('ul', {}, this.contacts.map(contact => createElement('li', {}, `${contact.name.first} ${contact.name.last}`))),
+    ]);
   },
 };
 </script>
