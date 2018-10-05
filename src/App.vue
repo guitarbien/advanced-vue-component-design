@@ -78,9 +78,9 @@
       <!-- 12 -->
       <div class="text-center p-8 my-8 card">
         <hello-world>
-          <template slot-scope="{ subject }">
+          <strong slot-scope="{ subject }">
             Hello {{ subject }}!
-          </template>
+          </strong>
         </hello-world>
       </div>
     </div>

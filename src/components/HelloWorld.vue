@@ -13,6 +13,11 @@ export default {
     };
   },
   render(createElement) {
+    console.log(
+      this.$scopedSlots.default({
+        subject: 'world',
+      }));
+
     return createElement('div', {}, [
       createElement(ToggleInput, {
         props: {
