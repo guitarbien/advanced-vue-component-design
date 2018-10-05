@@ -77,7 +77,11 @@
 
       <!-- 12 -->
       <div class="text-center p-8 my-8 card">
-        <hello-world>Hello World!</hello-world>
+        <hello-world>
+          <template slot-scope="{ subject }">
+            Hello {{ subject }}!
+          </template>
+        </hello-world>
       </div>
     </div>
   </div>

@@ -31,7 +31,9 @@ export default {
           class: 'text-xl text-blue font-bold',
         },
       }, [
-        this.$slots.default,
+        this.$scopedSlots.default({
+          subject: 'world',
+        }),
       ]),
     ]);
   },
