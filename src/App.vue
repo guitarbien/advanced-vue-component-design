@@ -85,7 +85,7 @@
       </div>
 
       <!-- 16 -->
-      <new-contact-list url="/contact.json">
+      <fetch-json url="/contact.json">
         <div class="card" slot-scope="{ contacts }">
           <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
           <div>
@@ -101,7 +101,8 @@
               </div>
             </div>
           </div>
-        </div></new-contact-list>
+        </div>
+      </fetch-json>
     </div>
   </div>
 </template>
@@ -109,7 +110,7 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import ContactList from './components/ContactList.vue';
-import NewContactList from './components/NewContactList.vue';
+import FetchJson from './components/FetchJson.vue';
 import UserSettingsForm from './components/UserSettingsForm.vue';
 import DatePicker from './components/DatePicker.vue';
 import AnnouncementModal from './components/AnnouncementModal.vue';
@@ -120,7 +121,7 @@ export default {
   components: {
     HelloWorld,
     ContactList,
-    NewContactList,
+    FetchJson,
     UserSettingsForm,
     DatePicker,
     AnnouncementModal,
