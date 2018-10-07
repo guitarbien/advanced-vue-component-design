@@ -113,7 +113,10 @@
           <h1 class="text-2xl font-bold mb-6">Top Death Metal Albums</h1>
           <div v-if="loading">Loading...</div>
           <div v-else class="album-grid">
-            <div class="album-grid-item">
+            <div v-for="(album, key) in albums" :key="key" class="album-grid-item">
+              <img :src="album.artwork">
+              <h2 class="album-title">{{ album.title }}</h2>
+              <p class="album-artist">{{ album.artist }}</p>
             </div>
           </div>
         </div>
