@@ -86,7 +86,7 @@
 
       <!-- 16 -->
       <new-contact-list>
-        <div class="card">
+        <div class="card" slot-scope="{ contacts }">
           <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
           <div>
             <div v-for="contact in contacts" :key="contact.id" class="flex items-center spaced-y-6">
