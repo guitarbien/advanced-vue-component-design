@@ -1,13 +1,14 @@
 <script>
 export default {
   name: 'NewContactList',
+  props: ['url'],
   data() {
     return {
       contacts: [],
     };
   },
   created() {
-    fetch('contact.json')
+    fetch(this.url)
       .then(response => response.json())
       .then((contacts) => {
         this.contacts = contacts;

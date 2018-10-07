@@ -85,7 +85,7 @@
       </div>
 
       <!-- 16 -->
-      <new-contact-list>
+      <new-contact-list url="/contact.json">
         <div class="card" slot-scope="{ contacts }">
           <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
           <div>
