@@ -30,7 +30,7 @@ export default {
     };
   },
   created() {
-    fetch('contact.json')
+    fetch('contacts.json')
       .then(response => response.json())
       .then((contacts) => {
         this.contacts = contacts;

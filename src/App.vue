@@ -85,7 +85,7 @@
       </div>
 
       <!-- 16 -->
-      <fetch-json url="/contact.json">
+      <fetch-json url="/contacts.json">
         <div class="card" slot-scope="{ json: contacts, loading }">
           <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
           <div v-if="loading">Loading...</div>

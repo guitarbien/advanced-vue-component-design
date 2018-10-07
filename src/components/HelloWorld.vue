@@ -1,6 +1,6 @@
 <script>
 /** @type {Array} */
-import contacts from '../../public/contact.json';
+import contacts from '../../public/contacts.json';
 import ToggleInput from './ToggleInput.vue';
 
 export default {
