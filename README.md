@@ -32,3 +32,4 @@ yarn run lint
 - [08-Injecting Content Using Slots.md](docs/08-InjectingContentUsingSlots.md)
 - [11-Passing Data Up Using Scoped Slots.md](./docs/11-PassingDataUpUsingScopedSlots.md)
 - [12-Render Functions 101.md](./docs/12-RenderFunctions101.md)
+- [16-Data Provider Components.md](./docs/16-DataProviderComponents.md)
