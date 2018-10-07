@@ -11,7 +11,9 @@ export default {
     fetch(this.url)
       .then(response => response.json())
       .then((json) => {
-        this.json = json;
+        setTimeout(() => {
+          this.json = json;
+        }, 2000);
       });
   },
   render() {
