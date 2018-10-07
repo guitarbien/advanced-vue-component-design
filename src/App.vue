@@ -83,6 +83,9 @@
           </strong>
         </hello-world>
       </div>
+
+      <!-- 16 -->
+      <new-contact-list></new-contact-list>
     </div>
   </div>
 </template>
@@ -90,6 +93,7 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import ContactList from './components/ContactList.vue';
+import NewContactList from './components/NewContactList.vue';
 import UserSettingsForm from './components/UserSettingsForm.vue';
 import DatePicker from './components/DatePicker.vue';
 import AnnouncementModal from './components/AnnouncementModal.vue';
@@ -100,6 +104,7 @@ export default {
   components: {
     HelloWorld,
     ContactList,
+    NewContactList,
     UserSettingsForm,
     DatePicker,
     AnnouncementModal,
