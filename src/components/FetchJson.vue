@@ -4,7 +4,7 @@ export default {
   props: ['url'],
   data() {
     return {
-      json: [],
+      json: null,
       loading: true,
     };
   },
