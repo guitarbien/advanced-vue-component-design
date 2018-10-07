@@ -89,19 +89,7 @@
         <div class="card" slot-scope="{ json: contacts, loading }">
           <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
           <div v-if="loading">Loading...</div>
-          <div v-else>
-            <div v-for="contact in contacts" :key="contact.id" class="flex items-center spaced-y-6">
-              <img :src="contact.picture.medium" class="h-12 w-12 rounded-full block mr-2" alt="">
-              <div>
-                <div class="font-bold">
-                  {{ contact.name.first }} {{ contact.name.last }}
-                </div>
-                <div class="text-grey-dark">
-                  {{ contact.email }}
-                </div>
-              </div>
-            </div>
-          </div>
+          <new-contact-list v-else :contacts="contacts"></new-contact-list>
         </div>
       </fetch-json>
     </div>
@@ -128,6 +116,7 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue';
 import ContactList from './components/ContactList.vue';
+import NewContactList from './components/NewContactList.vue';
 import FetchJson from './components/FetchJson.vue';
 import UserSettingsForm from './components/UserSettingsForm.vue';
 import DatePicker from './components/DatePicker.vue';
@@ -139,6 +128,7 @@ export default {
   components: {
     HelloWorld,
     ContactList,
+    NewContactList,
     FetchJson,
     UserSettingsForm,
     DatePicker,
