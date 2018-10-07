@@ -32,6 +32,11 @@ export default {
         this.contacts = contacts;
       });
   },
+  render() {
+    return this.$scopedSlots.default({
+      contacts: this.contacts,
+    });
+  },
 };
 
 </script>
