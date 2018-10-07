@@ -5,6 +5,7 @@ export default {
   data() {
     return {
       json: [],
+      loading: true,
     };
   },
   created() {
@@ -13,12 +14,14 @@ export default {
       .then((json) => {
         setTimeout(() => {
           this.json = json;
+          this.loading = false;
         }, 2000);
       });
   },
   render() {
     return this.$scopedSlots.default({
       json: this.json,
+      loading: this.loading,
     });
   },
 };
