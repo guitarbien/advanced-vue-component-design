@@ -108,10 +108,14 @@
 
     <br>
     <div class="max-w-md mx-auto mb-8">
-      <fetch-json url="/contact.json">
-        <div class="card" slot-scope="{ json: contacts, loading }">
-          <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
+      <fetch-json url="/albums.json">
+        <div class="card" slot-scope="{ json: albums, loading }">
+          <h1 class="text-2xl font-bold mb-6">Top Death Metal Albums</h1>
           <div v-if="loading">Loading...</div>
+          <div v-else class="album-grid">
+            <div class="album-grid-item">
+            </div>
+          </div>
         </div>
       </fetch-json>
     </div>
