@@ -6,9 +6,34 @@ export default {
     event: 'update',
   },
   props: ['tags'],
+  data() {
+    return {
+      input: '',
+    };
+  },
+  computed: {
+    newTag() {
+      return this.input.trim();
+    },
+  },
   methods: {
     removeTag(tag) {
       this.$emit('update', this.tags.filter(t => t !== tag));
+    },
+    addTag() {
+      if (this.newTag.length === 0 || this.tags.includes(this.newTag)) {
+        return;
+      }
+      this.$emit('update', [...this.tags, this.newTag]);
+      this.clearInput();
+    },
+    clearInput() {
+      this.input = '';
+    },
+    handleBackspace() {
+      if (this.newTag.length === 0) {
+        this.$emit('update', this.tags.slice(0, -1));
+      }
     },
   },
   render() {
