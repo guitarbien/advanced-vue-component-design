@@ -110,10 +110,17 @@
         </div>
       </fetch-json>
     </div>
+
+    <div class="max-w-sm mx-auto card mt-8">
+      <label class="form-label mb-2">Tags</label>
+      <tag-input v-model="tags"></tag-input>
+    </div>
+
   </div>
 </template>
 
 <script>
+import TagInput from './components/TagInput.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import ContactList from './components/ContactList.vue';
 import NewContactList from './components/NewContactList.vue';
@@ -126,6 +133,7 @@ import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
+    TagInput,
     HelloWorld,
     ContactList,
     NewContactList,
@@ -142,6 +150,7 @@ export default {
       // set to true the modal will open by default, and the scrollbar should be disabled
       modalOpen: true,
       accountId: 7,
+      tags: ['awesome', 'excellent', 'amazing'],
     };
   },
 };
