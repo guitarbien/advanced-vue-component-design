@@ -111,8 +111,13 @@
       </fetch-json>
     </div>
 
+
     <div class="max-w-sm mx-auto card mt-8">
-      <label class="form-label mb-2">Tags</label>
+      <label class="form-label mb-2">Renderless Tag Input</label>
+      <renderless-tag-input></renderless-tag-input>
+    </div>
+    <div class="max-w-sm mx-auto card mt-8">
+      <label class="form-label mb-2">Original Tag Input</label>
       <tag-input v-model="tags"></tag-input>
     </div>
 
@@ -120,6 +125,7 @@
 </template>
 
 <script>
+import RenderlessTagInput from './components/RenderlessTagInput.vue';
 import TagInput from './components/TagInput.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import ContactList from './components/ContactList.vue';
@@ -133,6 +139,7 @@ import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
+    RenderlessTagInput,
     TagInput,
     HelloWorld,
     ContactList,
