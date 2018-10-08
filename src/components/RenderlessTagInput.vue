@@ -8,7 +8,7 @@ export default {
   props: ['tags'],
   render() {
     return this.$scopedSlots.default({
-
+      tags: this.tags,
     });
   },
 };
