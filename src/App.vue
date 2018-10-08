@@ -119,7 +119,7 @@
           <span v-for="tag in tags" :key="tag" class="tag-input-tag">
             <span>{{ tag }}</span>
             <button type="button" class="tag-input-remove"
-                    v-on="removeButtonEvents"
+                    v-on="removeButtonEvents(tag)"
             >&times;</button>
           </span>
           <input class="tag-input-text" placeholder="Add tag..."
