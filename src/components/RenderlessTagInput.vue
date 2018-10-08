@@ -44,7 +44,9 @@ export default {
         value: this.input,
       },
       inputEvents: {
-        input: (e) => this.input = e.target.value,
+        input: (e) => {
+          this.input = e.target.value;
+        },
         keydown: (e) => {
           if (e.key === 'Backspace') {
             this.handleBackspace();
