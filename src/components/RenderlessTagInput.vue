@@ -41,7 +41,10 @@ export default {
       tags: this.tags,
       removeTag: this.removeTag,
       removeButtonEvents: {
-        click: this.removeTag,
+        click: (tag) => {
+          console.log(tag);
+          this.removeTag(tag);
+        },
       },
       inputProps: {
         value: this.input,
