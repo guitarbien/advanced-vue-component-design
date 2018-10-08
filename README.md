@@ -33,3 +33,4 @@ yarn run lint
 - [11-Passing Data Up Using Scoped Slots.md](./docs/11-PassingDataUpUsingScopedSlots.md)
 - [12-Render Functions 101.md](./docs/12-RenderFunctions101.md)
 - [16-Data Provider Components.md](./docs/16-DataProviderComponents.md)
+- [17-Passing Binding Props From Renderless Components.md](docs/17-PassingBindingPropsFromRenderlessComponents.md)
