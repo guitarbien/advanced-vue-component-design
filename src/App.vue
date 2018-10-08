@@ -123,7 +123,8 @@
             >&times;</button>
           </span>
           <input class="tag-input-text" placeholder="Add tag..."
-                 v-model="input"
+                 :value="input"
+                 @input="(e) => input = e.target.value"
                  @keydown.backspace="handleBackspace"
                  @keydown.enter.prevent="addTag"
           >
