@@ -122,7 +122,11 @@
                     @click="removeTag(tag)"
             >&times;</button>
           </span>
-          <input class="tag-input-text" placeholder="Add tag...">
+          <input class="tag-input-text" placeholder="Add tag..."
+                 v-model="input"
+                 @keydown.backspace="handleBackspace"
+                 @keydown.enter.prevent="addTag"
+          >
         </div>
       </renderless-tag-input>
     </div>
