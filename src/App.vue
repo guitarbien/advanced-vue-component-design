@@ -140,14 +140,14 @@
       <label class="form-label mb-2">Renderless Stacked Layout</label>
 
       <renderless-tag-input v-model="tags">
-        <div class="stacked-tag-input" slot-scope="{}">
+        <div class="stacked-tag-input" slot-scope="{ tags }">
           <div class="stacked-tag-input-form">
             <input class="form-input" placeholder="Add tag...">
             <button class="btn btn-indigo">Add Tag</button>
           </div>
           <ul class="stacked-tag-list">
-            <li>
-              sample-tag
+            <li v-for="tag in tags" :key="tag">
+              {{ tag }}
               <button type="button" class="stacked-tag-link">Remove</button>
             </li>
           </ul>
