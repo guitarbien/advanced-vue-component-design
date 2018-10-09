@@ -111,7 +111,7 @@
       </fetch-json>
     </div>
 
-
+    <!-- 17 -->
     <div class="max-w-sm mx-auto card mt-8">
       <label class="form-label mb-2">Renderless Tag Input</label>
       <renderless-tag-input v-model="tags">
@@ -129,11 +129,30 @@
         </div>
       </renderless-tag-input>
     </div>
+
     <div class="max-w-sm mx-auto card mt-8">
       <label class="form-label mb-2">Original Tag Input</label>
       <tag-input v-model="tags"></tag-input>
     </div>
 
+    <!-- 18 -->
+    <div class="max-w-sm mx-auto card mt-8">
+      <label class="form-label mb-2">Renderless Stacked Layout</label>
+
+      <div class="stacked-tag-input">
+        <div class="stacked-tag-input-form">
+          <input class="form-input" placeholder="Add tag...">
+          <button class="btn btn-indigo">Add Tag</button>
+        </div>
+        <ul class="stacked-tag-list">
+          <li>
+            sample-tag
+            <button type="button" class="stacked-tag-link">Remove</button>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </template>
 
