@@ -114,20 +114,7 @@
     <!-- 17 -->
     <div class="max-w-sm mx-auto card mt-8">
       <label class="form-label mb-2">Renderless Tag Input</label>
-      <renderless-tag-input v-model="tags">
-        <div class="tag-input" slot-scope="{ tags, removeTag, removeButtonEvents, inputProps, inputEvents }">
-          <span v-for="tag in tags" :key="tag" class="tag-input-tag">
-            <span>{{ tag }}</span>
-            <button type="button" class="tag-input-remove"
-                    v-on="removeButtonEvents(tag)"
-            >&times;</button>
-          </span>
-          <input class="tag-input-text" placeholder="Add tag..."
-                 v-bind="inputProps"
-                 v-on="inputEvents"
-          >
-        </div>
-      </renderless-tag-input>
+      <inline-tag-input v-model="tags"></inline-tag-input>
     </div>
 
     <div class="max-w-sm mx-auto card mt-8">
@@ -164,6 +151,7 @@
 </template>
 
 <script>
+import InlineTagInput from './components/InlineTagInput.vue';
 import RenderlessTagInput from './components/RenderlessTagInput.vue';
 import TagInput from './components/TagInput.vue';
 import HelloWorld from './components/HelloWorld.vue';
@@ -178,6 +166,7 @@ import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
+    InlineTagInput,
     RenderlessTagInput,
     TagInput,
     HelloWorld,
