@@ -1,5 +1,5 @@
 <template>
-  <renderless-tag-input v-model="tags">
+  <renderless-tag-input :tags="tags" @update="(newTags) => $emit('update', newTags)">
     <div class="tag-input" slot-scope="{ tags, removeTag, removeButtonEvents, inputProps, inputEvents }">
           <span v-for="tag in tags" :key="tag" class="tag-input-tag">
             <span>{{ tag }}</span>
