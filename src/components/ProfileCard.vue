@@ -22,7 +22,7 @@ export default {
   name: 'ProfileCard',
   components: {
     WithDimensions,
-  }
+  },
 };
 </script>
 
