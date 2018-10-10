@@ -5,7 +5,10 @@ export default {
     prop: 'tags',
     event: 'update',
   },
-  props: ['tags'],
+  props: {
+    tags: { required: true },
+    removeOnBackspace: { default: true },
+  },
   data() {
     return {
       input: '',
@@ -54,7 +57,7 @@ export default {
           this.input = e.target.value;
         },
         keydown: (e) => {
-          if (e.key === 'Backspace') {
+          if (e.key === 'Backspace' && this.removeOnBackspace) {
             this.handleBackspace();
           }
           if (e.key === 'Enter') {
