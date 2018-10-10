@@ -132,7 +132,7 @@
     <div class="min-h-screen bg-grey-darker p-4">
       <div style="width: 420px" class="mx-auto border-l border-r border-dashed border-grey-dark py-4 mb-4">
         <with-dimensions>
-          <div class="profile-card profile-card--horizontal">
+          <div slot-scope="{ width }" class="profile-card" :class="{ 'profile-card--horizontal': width >= 400 }">
             <img class="profile-card-image" src="/img/toby.jpg" alt="">
             <div class="profile-card-meta">
               <div class="mb-4">
