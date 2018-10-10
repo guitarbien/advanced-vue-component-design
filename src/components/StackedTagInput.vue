@@ -1,5 +1,8 @@
 <template>
-  <renderless-tag-input :tags="tags" @update="(newTags) => $emit('update', newTags)">
+  <renderless-tag-input :tags="tags"
+                        @update="(newTags) => $emit('update', newTags)"
+                        :remove-on-backspace="false"
+  >
     <div class="stacked-tag-input" slot-scope="{ tags, addTag, removeButtonEvents, inputProps, inputEvents }">
       <div class="stacked-tag-input-form">
         <input class="form-input" placeholder="Add tag..."
