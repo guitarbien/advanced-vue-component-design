@@ -139,7 +139,7 @@
     <div class="max-w-sm mx-auto card mt-8">
       <label class="form-label mb-2">Renderless Stacked Layout</label>
 
-      <renderless-tag-input v-model="tags">
+      <renderless-tag-input v-model="tags" :remove-on-backspace="false">
         <div class="stacked-tag-input" slot-scope="{ tags, addTag, removeButtonEvents, inputProps, inputEvents }">
           <div class="stacked-tag-input-form">
             <input class="form-input" placeholder="Add tag..."
