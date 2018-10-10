@@ -23,6 +23,13 @@ export default {
   components: {
     RenderlessTagInput,
   },
+  model: {
+    prop: 'tags',
+    event: 'update',
+  },
+  props: {
+    tags: { required: true },
+  },
 };
 </script>
 
