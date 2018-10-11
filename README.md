@@ -34,3 +34,4 @@ yarn run lint
 - [12-Render Functions 101.md](./docs/12-RenderFunctions101.md)
 - [16-Data Provider Components.md](./docs/16-DataProviderComponents.md)
 - [17-Passing Binding Props From Renderless Components.md](docs/17-PassingBindingPropsFromRenderlessComponents.md)
+- [26-Building Compound Components With Provide/Inject.md](./docs/26-BuildingCompoundComponentsWithProvideInject.md)
