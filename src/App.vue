@@ -175,22 +175,28 @@
       <div class="max-w-sm mx-auto">
         <div class="card">
           <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
+          <sortable-list>
             <div class="contact-list">
-              <div class="contact-list-item" v-for="contact in contacts" :key="contact.id">
-                <div class="contact-list-contact">
-                  <img :src="contact.avatar" class="contact-list-avatar" alt="">
-                  <div>
-                    <div class="contact-list-name">
-                      {{ contact.name }}
-                    </div>
-                    <div class="contact-list-email">
-                      {{ contact.email }}
+              <sortable-item>
+                <div class="contact-list-item" v-for="contact in contacts" :key="contact.id">
+                  <div class="contact-list-contact">
+                    <img :src="contact.avatar" class="contact-list-avatar" alt="">
+                    <div>
+                      <div class="contact-list-name">
+                        {{ contact.name }}
+                      </div>
+                      <div class="contact-list-email">
+                        {{ contact.email }}
+                      </div>
                     </div>
                   </div>
+                  <sortable-handle>
+                    <svg class="contact-list-handle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M14 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM8 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>
+                  </sortable-handle>
                 </div>
-                <svg class="contact-list-handle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M14 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zM8 4h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm6 6h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1zm-6 0h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1z"/></svg>
-              </div>
+              </sortable-item>
             </div>
+          </sortable-list>
         </div>
       </div>
     </div>
@@ -198,6 +204,9 @@
 </template>
 
 <script>
+import SortableList from './components/SortableList.vue';
+import SortableItem from './components/SortableItem.vue';
+import SortableHandle from './components/SortableHandle.vue';
 import AccordionItem from './components/AccordionItem.vue';
 import AccordionList from './components/AccordionList.vue';
 import ProfileCard from './components/ProfileCard.vue';
@@ -218,6 +227,9 @@ import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
+    SortableList,
+    SortableItem,
+    SortableHandle,
     AccordionItem,
     AccordionList,
     ProfileCard,
