@@ -176,7 +176,7 @@
         <div class="card">
           <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
           <sortable-list v-model="contacts">
-            <div class="contact-list">
+            <div class="contact-list" slot-scope="{ items: contacts }">
               <sortable-item v-for="contact in contacts" :key="contact.id">
                 <div class="contact-list-item">
                   <div class="contact-list-contact">
