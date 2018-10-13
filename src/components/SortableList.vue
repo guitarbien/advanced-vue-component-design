@@ -5,8 +5,8 @@ export default {
   name: 'SortableList',
   mounted() {
     new Sortable(this.$el, {
-      draggable: '.contact-list-item',
-      handle: '.contact-list-handle',
+      draggable: '.sortable-list-item',
+      handle: '.sortable-list-handle',
       mirror: {
         constrainDimensions: true,
       },
