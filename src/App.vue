@@ -177,8 +177,8 @@
           <h1 class="text-2xl font-bold mb-6">Your Contacts</h1>
           <sortable-list>
             <div class="contact-list">
-              <sortable-item>
-                <div class="contact-list-item" v-for="contact in contacts" :key="contact.id">
+              <sortable-item v-for="contact in contacts" :key="contact.id">
+                <div class="contact-list-item">
                   <div class="contact-list-contact">
                     <img :src="contact.avatar" class="contact-list-avatar" alt="">
                     <div>
