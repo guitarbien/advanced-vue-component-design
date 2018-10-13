@@ -1,8 +1,9 @@
 <script>
 export default {
   name: 'SortableItem',
+  inject: ['sortableListItemClass'],
   mounted() {
-    this.$el.classList.add('sortable-list-item');
+    this.$el.classList.add(this.sortableListItemClass);
   },
   render() {
     return this.$slots.default[0];
