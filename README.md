@@ -35,3 +35,4 @@ yarn run lint
 - [16-Data Provider Components.md](./docs/16-DataProviderComponents.md)
 - [17-Passing Binding Props From Renderless Components.md](docs/17-PassingBindingPropsFromRenderlessComponents.md)
 - [26-Building Compound Components With Provide/Inject.md](./docs/26-BuildingCompoundComponentsWithProvideInject.md)
+- [27-Building a Compound Sortable List Component.md](./docs/27-BuildingACompoundSortableListComponent.md)
