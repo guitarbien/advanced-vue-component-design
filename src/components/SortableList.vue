@@ -3,16 +3,24 @@ import { Sortable } from '@shopify/draggable';
 
 export default {
   name: 'SortableList',
+  props: {
+    itemClass: {
+      default: 'sortable-list-item',
+    },
+    handleClass: {
+      default: 'sortable-list-handle',
+    },
+  },
   provide() {
     return {
-      sortableListItemClass: 'sortable-list-item',
-      sortableListHandleClass: 'sortable-list-handle',
+      sortableListItemClass: this.itemClass,
+      sortableListHandleClass: this.handleClass,
     };
   },
   mounted() {
     new Sortable(this.$el, {
-      draggable: '.sortable-list-item',
-      handle: '.sortable-list-handle',
+      draggable: `.${this.itemClass}`,
+      handle: `.${this.handleClass}`,
       mirror: {
         constrainDimensions: true,
       },
