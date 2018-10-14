@@ -8,7 +8,7 @@
       <input class="search-select-search" v-model="search">
       <ul class="search-select-options">
         <li class="search-select-option"
-            v-for="option in options"
+            v-for="option in filteredOptions"
             :key="option"
             @click="select(option)"
         >{{ option }}</li>
@@ -40,6 +40,11 @@ export default {
         'Testament',
       ],
     };
+  },
+  computed: {
+    filteredOptions() {
+      return this.options.filter(option => option.toLowerCase().startsWith(this.search.toLowerCase()));
+    },
   },
   methods: {
     open() {
