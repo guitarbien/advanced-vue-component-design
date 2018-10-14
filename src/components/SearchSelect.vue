@@ -1,5 +1,5 @@
 <template>
-  <div class="search-select is-active">
+  <div class="search-select" :class="{ 'is-active' : isOpen}">
     <button type="button" @click="open" class="search-select-input">
       <span v-if="value !== null">{{ value }}</span>
       <span v-else class="search-select-placeholder">Select a band...</span>
