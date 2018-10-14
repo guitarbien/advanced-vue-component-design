@@ -13,6 +13,7 @@
             @click="select(option)"
         >{{ option }}</li>
       </ul>
+      <div v-show="filteredOptions.length <= 0" class="search-select-empty">No results found</div>
     </div>
   </div>
 </template>
