@@ -6,14 +6,16 @@
     </button>
     <div v-show="isOpen" class="search-select-dropdown">
       <input class="search-select-search" v-model="search">
-      <ul class="search-select-options">
+      <ul v-show="filteredOptions.length > 0" class="search-select-options">
         <li class="search-select-option"
             v-for="option in filteredOptions"
             :key="option"
             @click="select(option)"
         >{{ option }}</li>
       </ul>
-      <div v-show="filteredOptions.length <= 0" class="search-select-empty">No results found</div>
+      <div v-show="filteredOptions.length <= 0" class="search-select-empty">
+        No results found for "{{ search }}"
+      </div>
     </div>
   </div>
 </template>
