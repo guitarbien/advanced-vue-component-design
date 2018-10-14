@@ -10,6 +10,7 @@
         <li class="search-select-option"
             v-for="option in options"
             :key="option"
+            @click="select(option)"
         >{{ option }}</li>
       </ul>
     </div>
@@ -42,6 +43,13 @@ export default {
   methods: {
     open() {
       this.isOpen = true;
+    },
+    close() {
+      this.isOpen = false;
+    },
+    select(option) {
+      this.value = option;
+      this.close();
     },
   },
 };
