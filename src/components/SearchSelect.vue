@@ -55,6 +55,7 @@ export default {
     },
     select(option) {
       this.value = option;
+      this.search = '';
       this.close();
     },
   },
