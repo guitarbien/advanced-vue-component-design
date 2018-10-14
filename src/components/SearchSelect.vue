@@ -1,9 +1,9 @@
 <template>
   <div class="search-select is-active">
-    <div class="search-select-input">
+    <button type="button" @click="open" class="search-select-input">
       <span v-if="value !== null">{{ value }}</span>
       <span v-else class="search-select-placeholder">Select a band...</span>
-    </div>
+    </button>
     <div v-show="isOpen" class="search-select-dropdown">
       <input class="search-select-search">
       <ul class="search-select-options">
@@ -38,6 +38,11 @@ export default {
         'Testament',
       ],
     };
+  },
+  methods: {
+    open() {
+      this.isOpen = true;
+    },
   },
 };
 </script>
