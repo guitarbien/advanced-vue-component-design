@@ -1,12 +1,10 @@
 <template>
   <div class="search-select is-active">
     <div class="search-select-input">
-      <span>Dark Angel</span>
-      <!--<span class="search-select-placeholder">Select a band...</span>-->
       <span v-if="value !== null">{{ value }}</span>
       <span v-else class="search-select-placeholder">Select a band...</span>
     </div>
-    <div class="search-select-dropdown">
+    <div v-show="isOpen" class="search-select-dropdown">
       <input class="search-select-search">
       <ul class="search-select-options">
         <li class="search-select-option"
@@ -24,6 +22,7 @@ export default {
   data() {
     return {
       value: 'Destruction',
+      isOpen: false,
       options: [
         'Anthrax',
         'Dark Angel',
