@@ -206,6 +206,9 @@
       <div class="mb-4">
         <search-select></search-select>
       </div>
+      <div class="text-right">
+        <button type="button" class="btn btn-blue">Save Changes</button>
+      </div>
     </div>
   </div>
 </template>
