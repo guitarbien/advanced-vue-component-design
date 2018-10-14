@@ -200,10 +200,18 @@
         </div>
       </div>
     </div>
+
+    <!-- 28 -->
+    <div class="min-h-screen max-w-sm mx-auto bg-white rounded shadow-lg p-8">
+      <div class="mb-4">
+        <search-select></search-select>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import SearchSelect from './components/SearchSelect.vue';
 import SortableList from './components/SortableList.vue';
 import SortableItem from './components/SortableItem.vue';
 import SortableHandle from './components/SortableHandle.vue';
@@ -227,6 +235,7 @@ import MediaCard from './components/MediaCard.vue';
 
 export default {
   components: {
+    SearchSelect,
     SortableList,
     SortableItem,
     SortableHandle,
