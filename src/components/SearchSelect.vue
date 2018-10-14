@@ -5,7 +5,7 @@
       <span v-else class="search-select-placeholder">Select a band...</span>
     </button>
     <div v-show="isOpen" class="search-select-dropdown">
-      <input class="search-select-search">
+      <input class="search-select-search" v-model="search">
       <ul class="search-select-options">
         <li class="search-select-option"
             v-for="option in options"
@@ -24,6 +24,7 @@ export default {
     return {
       value: 'Destruction',
       isOpen: false,
+      search: '',
       options: [
         'Anthrax',
         'Dark Angel',
