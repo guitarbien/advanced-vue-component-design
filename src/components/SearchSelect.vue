@@ -55,7 +55,7 @@ export default {
   methods: {
     open() {
       this.isOpen = true;
-      this.$refs.search.focus();
+      this.$nextTick(() => this.$refs.search.focus());
     },
     close() {
       this.isOpen = false;
