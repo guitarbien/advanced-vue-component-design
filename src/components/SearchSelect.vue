@@ -11,6 +11,7 @@
              @keydown.esc="close"
              @keydown.down="highlightNext"
              @keydown.up="highlightPrev"
+             @keydown.enter.prevent="selectHighlighted"
       >
       <ul ref="options" v-show="filteredOptions.length > 0" class="search-select-options">
         <li class="search-select-option" :class="{ 'is-active': index === highlightedIndex }"
@@ -55,6 +56,9 @@ export default {
       this.$emit('input', option);
       this.search = '';
       this.close();
+    },
+    selectHighlighted() {
+      this.select(this.filteredOptions[this.highlightedIndex]);
     },
     highlight(index) {
       this.highlightedIndex = index;
