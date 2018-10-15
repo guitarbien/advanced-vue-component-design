@@ -47,6 +47,9 @@ export default {
       highlightedIndex: 0,
     };
   },
+  beforeDestroy() {
+    this.popper.destroy();
+  },
   computed: {
     filteredOptions() {
       return this.filterFunction(this.search, this.options);
