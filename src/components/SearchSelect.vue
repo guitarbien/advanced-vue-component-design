@@ -61,6 +61,10 @@ export default {
     },
     highlightPrev() {
       this.highlightedIndex -= 1;
+
+      if (this.highlightedIndex < 0) {
+        this.highlightedIndex = this.filteredOptions.length - 1;
+      }
     },
   },
 };
