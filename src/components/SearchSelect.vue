@@ -45,6 +45,10 @@ export default {
   },
   methods: {
     open() {
+      if (this.isOpen) {
+        return;
+      }
+
       this.isOpen = true;
       this.$nextTick(() => {
         this.$refs.search.focus();
