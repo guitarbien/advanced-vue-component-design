@@ -63,7 +63,7 @@ export default {
         this.highlightedIndex = 0;
       }
 
-      this.$refs.options.children[this.highlightedIndex].scrollIntoView();
+      this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' });
     },
     highlightPrev() {
       this.highlightedIndex -= 1;
@@ -72,7 +72,7 @@ export default {
         this.highlightedIndex = this.filteredOptions.length - 1;
       }
 
-      this.$refs.options.children[this.highlightedIndex].scrollIntoView();
+      this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' });
     },
   },
 };
