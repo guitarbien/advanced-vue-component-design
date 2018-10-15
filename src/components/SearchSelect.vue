@@ -10,6 +10,7 @@
              ref="search"
              @keydown.esc="close"
              @keydown.down="highlightNext"
+             @keydown.up="highlightPrev"
       >
       <ul v-show="filteredOptions.length > 0" class="search-select-options">
         <li class="search-select-option" :class="{ 'is-active': index === highlightedIndex }"
@@ -57,6 +58,9 @@ export default {
     },
     highlightNext() {
       this.highlightedIndex += 1;
+    },
+    highlightPrev() {
+      this.highlightedIndex -= 1;
     },
   },
 };
