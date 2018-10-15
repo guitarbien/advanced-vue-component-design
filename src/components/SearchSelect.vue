@@ -9,6 +9,7 @@
              v-model="search"
              ref="search"
              @keydown.esc="close"
+             @keydown.down="highlightNext"
       >
       <ul v-show="filteredOptions.length > 0" class="search-select-options">
         <li class="search-select-option" :class="{ 'is-active': index === highlightedIndex }"
@@ -53,6 +54,9 @@ export default {
       this.$emit('input', option);
       this.search = '';
       this.close();
+    },
+    highlightNext() {
+      this.highlightedIndex += 1;
     },
   },
 };
