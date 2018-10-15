@@ -46,7 +46,10 @@ export default {
   methods: {
     open() {
       this.isOpen = true;
-      this.$nextTick(() => this.$refs.search.focus());
+      this.$nextTick(() => {
+        this.$refs.search.focus();
+        this.scrollToHighlighted();
+      });
     },
     close() {
       this.isOpen = false;
@@ -61,6 +64,9 @@ export default {
     selectHighlighted() {
       this.select(this.filteredOptions[this.highlightedIndex]);
     },
+    scrollToHighlighted() {
+      this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' });
+    },
     highlight(index) {
       this.highlightedIndex = index;
 
@@ -72,7 +78,7 @@ export default {
         this.highlightedIndex = 0;
       }
 
-      this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' });
+      this.scrollToHighlighted();
     },
     highlightNext() {
       this.highlight(this.highlightedIndex + 1);
