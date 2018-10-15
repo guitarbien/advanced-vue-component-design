@@ -58,6 +58,12 @@ export default {
     },
     highlightNext() {
       this.highlightedIndex += 1;
+
+      if (this.highlightedIndex > this.filteredOptions.length - 1) {
+        this.highlightedIndex = 0;
+      }
+
+      this.$refs.options.children[this.highlightedIndex].scrollIntoView();
     },
     highlightPrev() {
       this.highlightedIndex -= 1;
