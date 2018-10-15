@@ -8,6 +8,7 @@
       <input class="search-select-search"
              v-model="search"
              ref="search"
+             @keydown.esc="close"
       >
       <ul v-show="filteredOptions.length > 0" class="search-select-options">
         <li class="search-select-option"
