@@ -36,3 +36,4 @@ yarn run lint
 - [17-Passing Binding Props From Renderless Components.md](docs/17-PassingBindingPropsFromRenderlessComponents.md)
 - [26-Building Compound Components With Provide/Inject.md](./docs/26-BuildingCompoundComponentsWithProvideInject.md)
 - [27-Building a Compound Sortable List Component.md](./docs/27-BuildingACompoundSortableListComponent.md)
+- [32-Building a Search Select: Keyboard Navigation.md](./docs/32-BuildingASearchSelect-KeyboardNavigation.md)
