@@ -64,6 +64,10 @@ export default {
       });
     },
     close() {
+      if (!this.isOpen) {
+        return;
+      }
+
       this.isOpen = false;
       this.$refs.button.focus();
     },
