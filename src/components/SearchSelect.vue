@@ -26,25 +26,11 @@
 <script>
 export default {
   name: 'SearchSelect',
-  props: ['value'],
+  props: ['value', 'options'],
   data() {
     return {
       isOpen: false,
       search: '',
-      options: [
-        'Anthrax',
-        'Dark Angel',
-        'Destruction',
-        'Exodus',
-        'Flotsam and Jetsam',
-        'Kreator',
-        'Megadeth',
-        'Metallica',
-        'Overkill',
-        'Sepultura',
-        'Slayer',
-        'Testament',
-      ],
     };
   },
   computed: {
