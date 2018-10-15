@@ -12,7 +12,7 @@
              @keydown.down="highlightNext"
              @keydown.up="highlightPrev"
       >
-      <ul v-show="filteredOptions.length > 0" class="search-select-options">
+      <ul ref="options" v-show="filteredOptions.length > 0" class="search-select-options">
         <li class="search-select-option" :class="{ 'is-active': index === highlightedIndex }"
             v-for="(option, index) in filteredOptions"
             :key="option"
@@ -65,6 +65,8 @@ export default {
       if (this.highlightedIndex < 0) {
         this.highlightedIndex = this.filteredOptions.length - 1;
       }
+
+      this.$refs.options.children[this.highlightedIndex].scrollIntoView();
     },
   },
 };
