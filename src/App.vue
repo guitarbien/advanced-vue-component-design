@@ -206,11 +206,7 @@
       <div class="mb-4">
         <search-select v-model="selectedBand"
                        :options="bands"
-                       :filter-function="(search, options) => {
-                          return options.filter(option => {
-                            return option.toLowerCase().startsWith(search.toLowerCase());
-                          });
-                       }"
+                       :filter-function="applySearchFilter"
         ></search-select>
       </div>
       <div class="text-right">
@@ -322,6 +318,11 @@ export default {
         'Testament',
       ],
     };
+  },
+  methods: {
+    applySearchFilter(search, options) {
+      return options.filter(option => option.toLowerCase().startsWith(search.toLowerCase()));
+    },
   },
 };
 </script>
