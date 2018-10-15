@@ -56,8 +56,12 @@ export default {
       this.search = '';
       this.close();
     },
-    highlightNext() {
-      this.highlightedIndex += 1;
+    highlight(index) {
+      this.highlightedIndex = index;
+
+      if (this.highlightedIndex < 0) {
+        this.highlightedIndex = this.filteredOptions.length - 1;
+      }
 
       if (this.highlightedIndex > this.filteredOptions.length - 1) {
         this.highlightedIndex = 0;
@@ -65,14 +69,11 @@ export default {
 
       this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' });
     },
+    highlightNext() {
+      this.highlight(this.highlightedIndex + 1);
+    },
     highlightPrev() {
-      this.highlightedIndex -= 1;
-
-      if (this.highlightedIndex < 0) {
-        this.highlightedIndex = this.filteredOptions.length - 1;
-      }
-
-      this.$refs.options.children[this.highlightedIndex].scrollIntoView({ block: 'nearest' });
+      this.highlight(this.highlightedIndex - 1);
     },
   },
 };
