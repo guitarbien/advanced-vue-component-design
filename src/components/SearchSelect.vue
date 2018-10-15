@@ -12,6 +12,7 @@
              @keydown.down="highlightNext"
              @keydown.up="highlightPrev"
              @keydown.enter.prevent="selectHighlighted"
+             @keydown.tab.prevent
       >
       <ul ref="options" v-show="filteredOptions.length > 0" class="search-select-options">
         <li class="search-select-option" :class="{ 'is-active': index === highlightedIndex }"
