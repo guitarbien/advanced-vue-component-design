@@ -11,8 +11,8 @@
              @keydown.esc="close"
       >
       <ul v-show="filteredOptions.length > 0" class="search-select-options">
-        <li class="search-select-option"
-            v-for="option in filteredOptions"
+        <li class="search-select-option" :class="{ 'is-active': index === highlightedIndex }"
+            v-for="(option, index) in filteredOptions"
             :key="option"
             @click="select(option)"
         >{{ option }}</li>
@@ -32,6 +32,7 @@ export default {
     return {
       isOpen: false,
       search: '',
+      highlightedIndex: 0,
     };
   },
   computed: {
