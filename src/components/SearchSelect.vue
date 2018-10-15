@@ -62,7 +62,7 @@ export default {
       this.$refs.button.focus();
     },
     select(option) {
-      this.value = option;
+      this.$emit('input', option);
       this.search = '';
       this.close();
     },
