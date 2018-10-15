@@ -5,7 +5,10 @@
       <span v-else class="search-select-placeholder">Select a band...</span>
     </button>
     <div v-show="isOpen" class="search-select-dropdown">
-      <input class="search-select-search" v-model="search">
+      <input class="search-select-search"
+             v-model="search"
+             ref="search"
+      >
       <ul v-show="filteredOptions.length > 0" class="search-select-options">
         <li class="search-select-option"
             v-for="option in filteredOptions"
@@ -52,6 +55,7 @@ export default {
   methods: {
     open() {
       this.isOpen = true;
+      this.$refs.search.focus();
     },
     close() {
       this.isOpen = false;
