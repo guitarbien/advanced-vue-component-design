@@ -66,10 +66,14 @@ export default {
       });
     },
     setupPopper() {
-      // new Popper(reference, element, options);
-      new Popper(this.$refs.button, this.$refs.dropdown, {
-        placement: 'bottom',
-      });
+      if (this.popper === undefined) {
+        // new Popper(reference, element, options);
+        this.popper = new Popper(this.$refs.button, this.$refs.dropdown, {
+          placement: 'bottom',
+        });
+      } else {
+        this.popper.scheduleUpdate();
+      }
     },
     close() {
       if (!this.isOpen) {
