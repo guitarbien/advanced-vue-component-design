@@ -204,7 +204,14 @@
     <!-- 28 -->
     <div class="min-h-screen max-w-sm mx-auto bg-white rounded shadow-lg p-8">
       <div class="mb-4">
-        <search-select v-model="selectedBand" :options="bands"></search-select>
+        <search-select v-model="selectedBand"
+                       :options="bands"
+                       :filter-function="(search, options) => {
+                          return options.filter(option => {
+                            return option.toLowerCase().startsWith(search.toLowerCase());
+                          });
+                       }"
+        ></search-select>
       </div>
       <div class="text-right">
         <button type="button" class="btn btn-blue">Save Changes</button>

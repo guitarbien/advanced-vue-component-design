@@ -26,7 +26,7 @@
 <script>
 export default {
   name: 'SearchSelect',
-  props: ['value', 'options'],
+  props: ['value', 'options', 'filterFunction'],
   data() {
     return {
       isOpen: false,
@@ -35,7 +35,7 @@ export default {
   },
   computed: {
     filteredOptions() {
-      return this.options.filter(option => option.toLowerCase().startsWith(this.search.toLowerCase()));
+      return this.filterFunction(this.search, this.options);
     },
   },
   methods: {
