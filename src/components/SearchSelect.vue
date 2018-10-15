@@ -55,6 +55,7 @@ export default {
     select(option) {
       this.$emit('input', option);
       this.search = '';
+      this.highlightedIndex = 0;
       this.close();
     },
     selectHighlighted() {
