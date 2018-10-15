@@ -204,7 +204,7 @@
     <!-- 28 -->
     <div class="min-h-screen max-w-sm mx-auto bg-white rounded shadow-lg p-8">
       <div class="mb-4">
-        <search-select></search-select>
+        <search-select v-model="selectedBand"></search-select>
       </div>
       <div class="text-right">
         <button type="button" class="btn btn-blue">Save Changes</button>
@@ -299,6 +299,7 @@ export default {
           avatar: 'https://randomuser.me/api/portraits/med/men/4.jpg',
         },
       ],
+      selectedBand: null,
     };
   },
 };

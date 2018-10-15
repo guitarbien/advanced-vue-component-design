@@ -26,9 +26,9 @@
 <script>
 export default {
   name: 'SearchSelect',
+  props: ['value'],
   data() {
     return {
-      value: 'Destruction',
       isOpen: false,
       search: '',
       options: [
