@@ -11,6 +11,7 @@
     "@shopify/draggable": "^1.0.0-beta.8",
     "acorn": "^6.4.1",
     "element-resize-detector": "^1.1.14",
+    "http-proxy": "^1.18.1",
     "minimist": "^1.2.3",
     "pikaday": "^1.7.0",
     "popper.js": "^1.14.4",
