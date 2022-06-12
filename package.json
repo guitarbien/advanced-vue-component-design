@@ -13,7 +13,7 @@
     "element-resize-detector": "^1.1.14",
     "highlight.js": "^10.5.0",
     "http-proxy": "^1.18.1",
-    "minimist": "^1.2.3",
+    "minimist": "^1.2.6",
     "node-forge": "^0.10.0",
     "pikaday": "^1.8.2",
     "popper.js": "^1.14.4",
